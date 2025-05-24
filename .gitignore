@@ -1,0 +1,31 @@
+# Executables
+*.exe
+*.out
+*.pdb
+
+# Object files
+*.o
+*.obj
+
+# Libraries
+*.lib
+*.a
+*.so
+*.dll
+*.dylib
+
+# Build directories
+build/
+bin/
+out/
+
+# IDE specific files
+.vscode/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.suo
+
+# System files
+.DS_Store
