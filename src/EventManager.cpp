@@ -27,6 +27,10 @@ void EventManager::OnEvent(SDL_Event &e)
             case SDL_EVENT_KEY_DOWN:
                 if (e.key.key == SDLK_ESCAPE)
                     m_EventDispatcher.DispatchEvent("AppQuit");  
+                else if(e.key.key == SDLK_R)
+                    m_EventDispatcher.DispatchEvent("AppResume"); 
+                else if(e.key.key == SDLK_P) 
+                    m_EventDispatcher.DispatchEvent("AppPause");
                 break;
         }
            

@@ -52,6 +52,7 @@ public:
 
 
 private:
+   
     Entity m_Track;
     Entity m_TrackOverlay;
     //Entity m_Car;
@@ -63,6 +64,7 @@ private:
     Signal<void(int)> m_OnAlivePopulationChange;
     Signal<void(int)> m_OnRoundChange;
     int m_TotalSimulationRound{1};
+   
     Evolution m_Evolution;
     
 };

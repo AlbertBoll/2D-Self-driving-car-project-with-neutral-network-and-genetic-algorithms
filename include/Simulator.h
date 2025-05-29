@@ -29,6 +29,7 @@ protected:
     size_t m_FPS = 60;
     float m_FrameDelay{};
     float m_dt{};
+    bool b_IsPaused{false};
     int m_NumOfAlive{0};
 };
 

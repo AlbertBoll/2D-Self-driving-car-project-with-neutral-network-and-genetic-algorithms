@@ -27,13 +27,17 @@ void Simulator::Initialize(const WindowProperties &winProp)
         std::cout << "Mouse Clicked: " << param.ID << " " << param.X << " " << param.Y << " " << param.Button << " " << param.Clicks << std::endl;
     });
 
+    auto AppPauseEvent = new Events<void()>("AppPause");
+    AppPauseEvent->Subscribe([this]() { b_IsPaused = true; });
 
-
+     auto AppResumeEvent = new Events<void()>("AppResume");
+    AppResumeEvent->Subscribe([this]() { b_IsPaused = false; });
+    
     EventManager::GetInstance().GetEventDispatcher().RegisterEvent(MouseClickEvent);
-
     EventManager::GetInstance().GetEventDispatcher().RegisterEvent(AppCloseEvent);
-
     EventManager::GetInstance().GetEventDispatcher().RegisterEvent(AppQuitEvent);
+    EventManager::GetInstance().GetEventDispatcher().RegisterEvent(AppPauseEvent);
+    EventManager::GetInstance().GetEventDispatcher().RegisterEvent(AppResumeEvent);
 
     AssetManager::GetInstance().Initialize(m_Renderer->GetSDLRenderer());
 
@@ -53,7 +57,9 @@ void Simulator::Run()
         auto startTime = SDL_GetTicksNS();
         SDL_Event event;
         HandleEvents(event);
-        Update(m_dt);
+        if(!b_IsPaused)
+            Update(m_dt);
+        //Update(m_dt);
         Render();
         auto endTime = SDL_GetTicksNS();
         auto deltaTime = endTime - startTime;
