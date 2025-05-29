@@ -4,6 +4,6 @@ Genetic algorithms, on the other hand, are evolutionary algorithms that search f
 This project uses Genetic Algorithms to search for the global optima of neural network layer. With more iterations, the car equipped with neural network could find the better way to drive on the track without deviating from runway.<br/><br/>
 
 ## Demo
-![me](https://github.com/AlbertBoll/2D-Self-driving-car-project-with-neutral-network-and-genetic-algorithms/blob/experiment/gif/Genetic-Algorithm-Simulator.gif)
+![me](https://github.com/AlbertBoll/2D-Self-driving-car-project-with-neutral-network-and-genetic-algorithms/blob/main/gif/Genetic-Algorithm-Simulator.gif)
 
 
