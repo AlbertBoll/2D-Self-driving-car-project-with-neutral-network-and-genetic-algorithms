@@ -5,3 +5,5 @@ This project uses Genetic Algorithms to search for the global optima of neural n
 
 ## Demo
 ![me](https://github.com/AlbertBoll/2D-Self-driving-car-project-with-neutral-network-and-genetic-algorithms/blob/experiment/gif/Genetic-Algorithm-Simulator.gif)
+
+
